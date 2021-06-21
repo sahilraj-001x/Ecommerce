@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My_Cart</title>
+</head>
+<style>
+  body{
+  font-family:Microsoft JhengHei;
+  }
+</style>
+<body>
+<p style="font-size:30px; margin-top:4%; margin-left:2%">My Shopping Cart</p>
+<div style = "border :1px solid; border-color:teal;"></div>
+{% for cart in url_for('my_cart') %}
+  {{cart}}
+{% endfor %}
+</body>
+</html>

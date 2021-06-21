@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Homepage</title>
+</head>
+<style>
+body{
+    font-family:Microsoft JhengHei;
+}
+.home{
+    font-size:28px;
+    text-align:center;
+}
+.products{
+    border :2px solid;
+    border-color:teal;
+    margin-top:15px;
+    margin-bottom:20%;
+    border-radius:10px;
+    width:90%;
+    margin-left:20px;
+}
+img{
+    float:left;
+}
+a.five:link {
+    color:#ff0000;text-decoration:none;
+}
+a.five:visited {
+    color:#0000ff;text-decoration:none;
+}
+a.five:hover {
+    text-decoration:underline;
+    color:#EE00EE;
+}
+
+</style>
+<body>
+<p class="home">Get Everything You Need</p>
+<div style = "border :1px solid; border-color:teal;"></div>
+<p style="font-size:19px; padding-left:20px;">
+    <u>Welcome {{name}}\{{name1}} !!</u>
+    <a href="/my_cart" style="margin-left:4%" class="five">My Cart</a>
+</p>
+<p style="font-size:28px; padding-left:20px;">Product List :
+<div>
+    <font style="padding-left:8%; font-size:21px">Laptops:</font>
+    <div style = "border :1px solid; border-color:grey; width:80%; margin-left:9%"></div>
+    <img src="{{pic}}" style="width:250px;height:250px;margin-right:15px">
+    <font style="font-size:20px;">
+2020 Apple MacBook Pro (13.3-inch/33.78 cm, 8GB RAM, 256GB SSD, 1.4GHz Quad-core 8th-Generation Intel Core i5 Processor, Two Thunderbolt 3 Ports) - Space Grey
+        <br><br>Price : ₹ 1,17,900.00
+    </font>
+    <p style="margin-top:15%;">
+        <div style = "border :1px solid; border-color:grey; width:80%; margin-left:9%"></div>
+    <img src="{{pic1}}" style="width:250px;height:250px;margin-right:15px;">
+        <font style="font-size:20px;">
+HP 15 (2021) Thin & Light 11th Gen Core i3 Laptop, 8 GB RAM, 1TB HDD, 15.6-inch (39.62 cms) FHD Screen, Windows 10, MS Office
+            <br><br>Price :	₹ 45,999.00
+        </font>
+    </p>
+    <p style="margin-top:15%;">
+        <div style = "border :1px solid; border-color:grey; width:80%; margin-left:9%"></div>
+    <img src="{{pic2}}" style="width:250px;height:250px;margin-right:15px">
+        <font style="font-size:20px;">
+Dell Inspiron 3505 15.6" FHD Display Laptop (R5-3450U / 8GB / 1TB + 256Gb SSD / Vega Graphics / Win 10 + MSO / Soft Mint Color) D560432WIN9S
+            <br><br>Price: ₹ 40,979.00
+        </font>
+    </p>
+    <p style="margin-top:15%;">
+        <div style = "border :1px solid; border-color:grey; width:80%; margin-left:9%"></div>
+    <img src="{{pic3}}" style="width:250px;height:250px;margin-right:15px">
+        <font style="font-size:20px;">
+ASUS ZenBook 14 (2020) Intel Core i5-1135G7 11th Gen 14-inch (35.56 cms) FHD T&L Laptop (8GB RAM/512GB NVMe SSD/Windows 10/MS Office 2019/Intel Iris Xᵉ Graphics/Pine Grey/1.17 kg), UX425EA-BM501TS
+            <br><br>Price :	₹ 98,990.00
+        </font>
+    </p>
+</div>
+</p>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Signup</title>
+</head>
+<style>
+input{
+    font-size:20px;
+    width:25%;
+}
+.but{
+    background-color:navyblue;
+    cursor:pointer;
+    border:1px solid grey;
+    border-radius:4px;
+    font-size:15px;
+    width:25.5%;
+    height:30px;
+    margin-top:20px;
+    margin-left:38%;
+}
+.but span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.1s;
+}
+.but span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+.but:hover span {
+    padding-right: 25px;
+}
+.but:hover span:after {
+    opacity: 1;
+    right: 0;
+</style>
+<body>
+    <form method="post" action="/signup">
+        <p style="font-family:Microsoft JhengHei; font-size:50px; margin-left:41%">Signup Page</p>
+            <font style="color:red; margin-left:38%;">*</font>
+                <input name="username" type="text" placeholder="username" required style="margin-top:4%;" maxlength="20">
+            <font style="color:red; margin-left:38%;">*</font>
+                <input name="password" type="password" placeholder="password" required style="margin-top:4%;" maxlength="20">
+            <font style="color:red; margin-left:38%;">*</font>
+                <input name="email" type="email" placeholder="email" required style="margin-top:4%;">
+            <font style="color:red; margin-left:38%;">*</font>
+                <input name="phno" type="tel" placeholder="phone number" required style="margin-top:4%;" maxlength="10">
+                <input name="address" type="text" placeholder="address" style="margin-top:4%; margin-left:38%;"><br>
+        <button type="submit" name="signup" class="but" style="font-size:20px"><span>Signup</span></button>
+        <button type="reset" name="cancel" class="but" style="font-size:20px"><span>Cancel</span></button>
+    </form>
+</body>
+</html>
