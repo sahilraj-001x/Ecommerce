@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>My_Cart</title>
+    <title>Order-history</title>
 </head>
 <style>
 body{
@@ -41,15 +41,12 @@ body{
     right: 0;
 </style>
 <body>
-<p style="font-size:30px; margin-top:4%; margin-left:2%">My Shopping Cart</p>
+<p style="font-size:30px; margin-top:4%; margin-left:2%">Order History</p>
 <div style = "border :1px solid; border-color:teal;"></div>
 {%for cart in cart%}
     <font style="margin-left:2%; margin-right:2%; font-size:20px">{{cart}}</font><br><br>
 {%endfor%}
 <div style = "border :1px solid; border-color:teal;"></div>
 <font style="font-size:20px">Total amount: ₹ {{amount}}</font>
-<form method="post">
-    <button class="but" style="text-align:center"><span>Proceed to buy</span></button>
-</form>
 </body>
 </html>

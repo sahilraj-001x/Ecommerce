@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>product-hp</title>
+</head>
+<style>
+body{
+    font-family:Microsoft JhengHei;
+}
+.img{
+    float:left;
+}
+.but{
+    background-color:navyblue;
+    cursor:pointer;
+    border:1px solid grey;
+    border-radius:4px;
+    font-size:15px;
+    width:25.5%;
+    height:30px;
+    margin-top:20px;
+    margin-left:38%;
+}
+.but span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.1s;
+}
+.but span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+.but:hover span {
+    padding-right: 25px;
+}
+.but:hover span:after {
+    opacity: 1;
+    right: 0;
+</style>
+<body>
+<div style = "border :1px solid; border-color:grey; width:80%; margin-left:9%"></div>
+<p>
+    <font style="font-size:30px;">
+HP 15 (2021) Thin & Light 11th Gen Core i3 Laptop, 8 GB RAM, 1TB HDD, 15.6-inch (39.62 cms) FHD Screen, Windows 10, MS Office
+        <br><br>Price :	₹ 45,999.00
+    </font>
+    <div style = "border :1px solid; border-color:grey; width:80%; margin-left:9%"></div>
+    <br>
+<img src="{{pic}}" style="width:400px;height:400px;margin-right:15px" class="img">
+    <form method="post">
+        <button style="margin-left:10%;" class="but"><span>Add to Cart</span></button><br><br>
+    </form>
+<font style="margin-left:10%; margin-top:4%"><b>Details</b></font><br>
+<font style="margin-left:10%; margin-top:4%">Operating System : Windows 10 Home</font><br><br>
+<font style="margin-left:10%; margin-top:4%">Screen Size : 15.6 Inches</font><br><br>
+<font style="margin-left:10%; margin-top:4%">Brand : HP</font><br><br>
+<font style="margin-left:10%; margin-top:4%">Graphics Chipset Brand : Intel</font><br><br>
+<font style="margin-left:10%; margin-top:4%">CPU Model : Core i3</font><br><br>
+
+<font style="margin-left:10%"><b>About this item</b></font><br><br>
+<font style="margin-left:10%">
+Processor: 11th Gen Intel Core i3-1115G4 (up to 4.1 GHz with Intel Turbo Boost Technology,6 MB L3 cache,2 cores)
+</font><br><br>
+<font style="margin-left:39.2%">
+Memory: 8 GB DDR4-2666 SDRAM (2 x 4 GB),Storage: 1TB 5400RPM SATA HDD, M.2 Slot Available to upgrade
+</font><br><br>
+<font style="margin-left:39.2%">
+Display: 15.6-Inch FHD IPS anti-glare micro-edge WLED-backlit, 250 nits, 45% NTSC (1920 x 1080)
+</font><br><br>
+<font style="margin-left:39.2%">
+Graphics: Intel UHD Graphics
+</font><br><br>
+<font style="margin-left:39.2%">
+Operating System & Pre-installed Software: Pre-loaded Windows 10 Home with lifetime validity,
+    <br><font style="margin-left:39.2%">Microsoft Office Home & Student 2019</font>
+</font><br><br>
+</p>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>product-macbook</title>
+</head>
+<style>
+body{
+    font-family:Microsoft JhengHei;
+}
+.img{
+    float:left;
+}
+.but{
+    background-color:navyblue;
+    cursor:pointer;
+    border:1px solid grey;
+    border-radius:4px;
+    font-size:15px;
+    width:25.5%;
+    height:30px;
+    margin-top:20px;
+    margin-left:38%;
+}
+.but span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.1s;
+}
+.but span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+.but:hover span {
+    padding-right: 25px;
+}
+.but:hover span:after {
+    opacity: 1;
+    right: 0;
+</style>
+<body>
+<div style = "border :1px solid; border-color:grey; width:80%; margin-left:9%"></div>
+<p>
+    <font style="font-size:30px;">
+2020 Apple MacBook Pro (13.3-inch/33.78 cm, 8GB RAM, 256GB SSD, 1.4GHz Quad-core 8th-Generation Intel Core i5 Processor, Two Thunderbolt 3 Ports) - Space Grey
+        <br><br>Price : ₹ 1,17,900.00
+    </font>
+    <div style = "border :1px solid; border-color:grey; width:80%; margin-left:9%"></div>
+    <br>
+<img src="{{pic}}" style="width:400px;height:400px;margin-right:15px" class="img">
+    <form method="post">
+        <button style="margin-left:10%;" class="but"><span>Add to Cart</span></button><br><br>
+    </form>
+<font style="margin-left:10%; margin-top:4%"><b>Details</b></font><br>
+<font style="margin-left:10%; margin-top:4%">Operating System : MacOS 10.15 Catalina</font><br><br>
+<font style="margin-left:10%; margin-top:4%">Graphics Coprocessor : Integrated</font><br><br>
+<font style="margin-left:10%; margin-top:4%">Hardware Interface : USB Type C, Thunderbolt</font><br><br>
+<font style="margin-left:10%; margin-top:4%">Screen Size : 13 Inches</font><br><br>
+<font style="margin-left:10%; margin-top:4%">Brand : Apple</font><br><br>
+<font style="margin-left:10%"><b>About this item</b></font><br><br>
+<font style="margin-left:10%">Eighth-generation quad-core Intel Core i5 processor</font><br><br>
+<font style="margin-left:39.2%">Brilliant Retina display with True Tone technology</font><br><br>
+<font style="margin-left:39.2%">Backlit Magic Keyboard</font><br><br>
+<font style="margin-left:39.2%">Touch Bar and Touch ID</font><br><br>
+<font style="margin-left:39.2%">Intel Iris Plus Graphics 645</font><br><br>
+<font style="margin-left:39.2%">Ultra-fast SSD</font><br><br>
+<font style="margin-left:39.2%">Two Thunderbolt 3 (USB-C) ports</font><br><br>
+</p>
+</body>
+</html>

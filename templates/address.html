@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Enter-your-address</title>
+</head>
+<style>
+input{
+    font-size:20px;
+    margin-left:36%;
+    width:30%;
+    height:40px;
+}
+.but{
+    background-color:navyblue;
+    cursor:pointer;
+    border:1px solid grey;
+    border-radius:4px;
+    font-size:15px;
+    width:25.5%;
+    height:30px;
+    margin-top:20px;
+    margin-left:38%;
+}
+.but span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.1s;
+}
+.but span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+.but:hover span {
+    padding-right: 25px;
+}
+.but:hover span:after {
+    opacity: 1;
+    right: 0;
+</style>
+<body>
+    <form method="post">
+        <p style="font-family:Microsoft JhengHei; font-size:50px; margin-left:36%">Enter Your Address<br>
+            <font style="font-size:20px; margin-left:5%; color:red"></font>
+        </p>
+        <input name="address" type="text" placeholder="address" required style="margin-top:4%;">
+        <button type="submit" name="login" class="but" style="font-size:20px"><span>Buy</span></button>
+        <button type="reset" name="reset" class="but" style="font-size:20px"><span>Cancel</span></button>
+    </form>
+</body>
+</html>
