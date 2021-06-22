@@ -83,7 +83,7 @@ def signup():
                 references products(products)
         )""".format(username))
         cnnt.commit()
-        return redirect(url_for('my_homepage'))
+        return redirect(url_for('myhomepage'))
     return render_template("signup.html")
 
 #Default Homepage
