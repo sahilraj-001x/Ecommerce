@@ -201,5 +201,9 @@ def asus():
         return redirect(url_for('my_homepage'))
     return render_template("asus.html", pic= mac)
 
+@app.route("/error")
+def error():
+    return render_template("error.html")
+
 if __name__ == "__main__":
     app.run(debug=True)
