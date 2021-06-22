@@ -5,10 +5,14 @@ import sqlite3 as sql
 app = Flask(__name__)
 app.secret_key = "secretkey"
 
+# Image files
+
 pic = path.join('static', 'photos')
 app.config["UPLOAD_FOLDER"] = pic
 
 ROOT = path.dirname(path.relpath(__file__))
+
+# Database connection...
 
 connect = sql.connect(path.join(ROOT, 'users.db'), check_same_thread=False)
 curser = connect.cursor()
@@ -17,28 +21,6 @@ curser = connect.cursor()
 cnnt = sql.connect(path.join(ROOT, 'products.db'), check_same_thread=False)
 crsr = cnnt.cursor()
 
-# products.db IS A DATABASE WHERE TABLE products CONTAINS PRODUCT DETAILS
-
-
-# id = input('id :')
-# products = input('products :')
-# price = input('price :')
-# description = input('description :')
-# cursr = cnnt.cursor()
-# cursr.execute("INSERT INTO products (id, products, price, description) VALUES(?, ?, ?, ?)", (id, products, price, description,))
-# cnnt.commit()
-# cnnt.close()
-
-# cursr = cnnt.cursor()
-# cursr.execute("""CREATE TABLE products(
-#         id int PRIMARY KEY,
-#         products VARCHAR(20) NOT NULL,
-#         price int NOT NULL,
-#         description VARCHAR(100) NOT NULL
-# )""")
-# cnnt.commit()
-# cnnt.close()
-
 @app.route("/")
 def homepage():
     pic = path.join(app.config["UPLOAD_FOLDER"], "mac.png")
@@ -46,6 +28,8 @@ def homepage():
     pic2 = path.join(app.config["UPLOAD_FOLDER"], "dell.png")
     pic3 = path.join(app.config["UPLOAD_FOLDER"], "asus.png")
     return render_template("home.html", pic=pic, pic1=pic1, pic2=pic2, pic3=pic3)
+
+#Users can login
 
 @app.route("/login", methods = ['POST','GET'])
 def login():
@@ -74,6 +58,8 @@ def login():
             pass
     return render_template("login.html")
 
+# Users can create new useraccount
+
 @app.route("/signup", methods=['POST','GET'])
 def signup():
     if request.method == 'GET':
@@ -101,6 +87,8 @@ def signup():
         return redirect(url_for('my_homepage'))
     return render_template("signup.html")
 
+#Default Homepage
+
 @app.route("/my-homepage")
 def myhomepage():
     if 'email' in session:
@@ -119,6 +107,8 @@ def myhomepage():
         pic3 = path.join(app.config["UPLOAD_FOLDER"], "asus.png")
         return render_template("home.html", pic=pic, pic1=pic1, pic2=pic2, pic3=pic3)
 
+# Homepage after users login
+    
 @app.route("/my_homepage")
 def my_homepage():
     if 'username' in session:
@@ -135,6 +125,8 @@ def my_homepage():
         pic3 = path.join(app.config["UPLOAD_FOLDER"], "asus.png")
         return render_template("users_homepage.html", pic=pic, pic1=pic1, pic2=pic2, pic3=pic3)
 
+# This is the shopping cart
+    
 @app.route("/my_cart", methods= ['POST', 'GET'])
 def my_cart():
     username = session['username']
@@ -143,6 +135,8 @@ def my_cart():
     if request.method == 'POST':
         return redirect(url_for('address'))
     return render_template("my_cart.html",name= username, cart= cart, amount= amount)
+
+# Address before buying the items finally
 
 @app.route("/address", methods= ['POST', 'GET'])
 def address():
@@ -154,12 +148,16 @@ def address():
         return redirect(url_for('order_details'))
     return render_template('address.html')
 
+# Order details
+
 @app.route("/order-details")
 def order_details():
     username = session['username']
     cart = crsr.execute("SELECT products.products, products.description FROM {} INNER JOIN products ON products.products= {}.cart".format(username, username)).fetchall()
     amount = crsr.execute("SELECT products.price FROM {} INNER JOIN products ON products.products= {}.cart".format(username,username)).fetchall()
     return render_template("buy.html", name=username, cart=cart, amount=amount)
+
+#Product- details
 
 @app.route("/product-macbook-pro", methods = ['POST', 'GET'])
 def macbook():
@@ -200,6 +198,8 @@ def asus():
         cnnt.commit()
         return redirect(url_for('my_homepage'))
     return render_template("asus.html", pic= mac)
+
+#Error message
 
 @app.route("/error")
 def error():
