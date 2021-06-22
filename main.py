@@ -80,10 +80,9 @@ def signup():
         crsr.execute("""CREATE TABLE {}(
                 cart VARCHAR(20) NOT NULL, constraint fk_cart
                 foreign key(cart)
-                references products(products),
+                references products(products)
         )""".format(username))
         cnnt.commit()
-        cnnt.close()
         return redirect(url_for('my_homepage'))
     return render_template("signup.html")
 
